@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>谢雨蕾 · GTM Portfolio</title>
+<meta name="description" content="谢雨蕾的 GTM 作品集：MANNER 新品上市、上海线下快闪与小红书本地生活增长实验。">
+<style>
+:root{
+  --ink:#18201d;
+  --muted:#65716b;
+  --faint:#97a19c;
+  --paper:#f5f1e8;
+  --white:#fff;
+  --line:#d7ddd8;
+  --green:#193e32;
+  --green-mid:#4f7768;
+  --green-pale:#dde9e1;
+  --clay:#9d4c34;
+  --clay-pale:#f2ded6;
+  --coral:#c6534a;
+  --coral-pale:#f3ddd8;
+  --amber:#d5a544;
+  --teal:#1e6f73;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",-apple-system,"Segoe UI",sans-serif;
+  line-height:1.7;
+}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+.topbar{
+  position:sticky;top:0;z-index:20;
+  background:rgba(245,241,232,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(24,32,29,.12);
+}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;min-height:58px;gap:24px}
+.brand{font-size:13px;font-weight:800;letter-spacing:.08em}
+.nav{display:flex;gap:22px;font-size:12px;color:var(--muted)}
+.nav a{text-decoration:none}
+.nav a:hover{color:var(--green)}
+.hero{
+  background:var(--green);
+  color:var(--white);
+  border-top:8px solid var(--amber);
+  padding:84px 0 72px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::after{
+  content:"";
+  position:absolute;right:-140px;top:-160px;width:520px;height:520px;
+  border:1px solid rgba(255,255,255,.12);border-radius:50%;
+}
+.eyebrow{font-size:11px;letter-spacing:.18em;font-weight:800;color:#b2c8bd}
+.hero h1{
+  margin:24px 0 12px;
+  font-size:clamp(48px,8vw,92px);
+  line-height:.98;
+  letter-spacing:-.04em;
+}
+.hero h2{
+  margin:0 0 26px;
+  font-size:clamp(20px,3vw,34px);
+  font-weight:500;
+  color:#dce8e0;
+}
+.hero p{max-width:760px;margin:0;color:#c7d7cf;font-size:17px}
+.hero-grid{display:grid;grid-template-columns:1.45fr .55fr;gap:60px;align-items:end}
+.hero-meta{border-left:1px solid rgba(255,255,255,.2);padding-left:28px}
+.hero-meta small{display:block;color:#9eb6aa;margin-bottom:8px}
+.hero-meta strong{display:block;font-size:18px;line-height:1.5}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 18px;text-decoration:none;font-size:13px;font-weight:800;
+  border:1px solid rgba(255,255,255,.45);
+}
+.btn.primary{background:var(--amber);border-color:var(--amber);color:#18201d}
+.btn:hover{opacity:.86}
+.notice{
+  margin:26px auto 0;padding:16px 20px;
+  background:#fff;border-left:5px solid var(--amber);
+  color:var(--muted);font-size:13px;
+}
+.section{padding:72px 0}
+.section.white{background:var(--white)}
+.section-head{display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:start;margin-bottom:34px}
+.section-no{font-size:12px;font-weight:900;letter-spacing:.12em;color:var(--green-mid)}
+.section-head h2{margin:0;font-size:clamp(28px,4vw,44px);line-height:1.2;letter-spacing:-.02em}
+.section-head p{margin:8px 0 0;color:var(--muted);max-width:760px}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.proof{
+  border-top:6px solid var(--green);
+  background:var(--white);
+  padding:24px;
+  min-height:340px;
+  display:flex;flex-direction:column;
+}
+.proof.clay{border-color:var(--clay)}
+.proof.coral{border-color:var(--coral)}
+.proof .kicker{font-size:10px;letter-spacing:.12em;font-weight:900;color:var(--muted)}
+.proof h3{font-size:24px;line-height:1.25;margin:13px 0 9px}
+.proof .choice{font-weight:700;color:var(--muted);line-height:1.55}
+.metrics{margin:24px 0;border-top:1px solid var(--line)}
+.metric{display:flex;justify-content:space-between;gap:18px;padding:10px 0;border-bottom:1px solid var(--line);font-size:12px}
+.metric b{font-size:14px;text-align:right}
+.proof .tail{margin-top:auto;color:var(--faint);font-size:11px}
+.read-rule{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);margin-top:26px;
+}
+.rule-step{background:var(--white);padding:22px}
+.rule-step b{display:block;color:var(--green);font-size:12px;margin-bottom:8px}
+.rule-step span{font-size:13px;color:var(--muted)}
+.asset-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.asset-col{background:var(--white);border:1px solid var(--line);padding:22px}
+.asset-col h3{margin:0 0 7px;font-size:18px}
+.asset-col .boundary{font-size:11px;color:var(--coral);min-height:40px}
+.asset-col ul{padding-left:18px;margin:12px 0 0}
+.asset-col li{font-size:13px;margin:7px 0}
+.asset-col a{color:var(--green);text-underline-offset:3px}
+.sources{font-size:11px;color:var(--faint);margin-top:22px}
+.slides{display:grid;gap:26px}
+.slide{
+  margin:0;background:var(--white);border:1px solid var(--line);
+  box-shadow:0 10px 30px rgba(24,32,29,.05);
+}
+.slide a{display:block;text-decoration:none}
+.slide img{width:100%;height:auto}
+.slide figcaption{
+  display:flex;justify-content:space-between;gap:18px;
+  padding:12px 16px;border-top:1px solid var(--line);
+  font-size:11px;color:var(--muted);
+}
+.slide figcaption b{color:var(--green)}
+.closing{
+  background:var(--green);color:#fff;padding:70px 0;
+  border-top:8px solid var(--amber);
+}
+.closing h2{font-size:clamp(34px,5vw,58px);line-height:1.08;margin:0 0 22px;letter-spacing:-.03em}
+.closing p{color:#dce8e0;max-width:850px}
+.role-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.15);margin-top:36px}
+.role-row div{background:var(--green);padding:20px}
+.role-row b{display:block;color:var(--amber);margin-bottom:7px}
+.role-row span{color:#c7d7cf;font-size:13px}
+footer{padding:26px 0;background:#111815;color:#99a69f;font-size:11px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:900px){
+  .hero-grid,.proof-grid,.asset-grid{grid-template-columns:1fr}
+  .hero-meta{border-left:0;border-top:1px solid rgba(255,255,255,.2);padding:22px 0 0}
+  .proof{min-height:0}
+  .read-rule{grid-template-columns:1fr 1fr}
+  .role-row{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .wrap{width:min(100% - 24px,var(--max))}
+  .nav{display:none}
+  .hero{padding:58px 0 52px}
+  .hero h1{font-size:48px}
+  .section{padding:52px 0}
+  .section-head{grid-template-columns:1fr;gap:8px}
+  .read-rule{grid-template-columns:1fr}
+  .slide figcaption{display:block}
+  .actions{flex-direction:column;align-items:flex-start}
+  .btn{width:100%}
+}
+</style>
+</head>
+<body>
+<nav class="topbar">
+  <div class="wrap">
+    <div class="brand">谢雨蕾 / GTM PORTFOLIO</div>
+    <div class="nav">
+      <a href="#overview">概览</a>
+      <a href="#projects">项目</a>
+      <a href="#assets">文件</a>
+      <a href="#deck">完整作品集</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">GTM STRATEGY & GROWTH / 2026</div>
+        <h1>GTM<br>Portfolio</h1>
+        <h2>Go-To-Market Strategy & Growth</h2>
+        <p>从产品上市、线下市场进入到本地内容增长，把用户需求、渠道、转化与经济模型连接成可验证的进入路径。</p>
+        <div class="actions">
+          <a class="btn primary" href="XieYulei_GTM_Portfolio_2026-11-11.pdf" target="_blank" rel="noopener">下载完整作品集 PDF</a>
+          <a class="btn" href="XieYulei_GTM_Portfolio_2026-11-11.pptx" download>下载可编辑 PPTX</a>
+        </div>
+      </div>
+      <div class="hero-meta">
+        <small>求职方向</small>
+        <strong>GTM / 市场增长<br>商业化 / 品牌营销<br>海外市场拓展</strong>
+        <small style="margin-top:24px">联系</small>
+        <strong style="font-size:13px">+86 155 8377 9280<br>2815015385@qq.com</strong>
+      </div>
+    </div>
+    <div class="notice">
+      <strong>数据边界：</strong>三个项目均为个人独立商业模拟项目，不对应真实企业委托。所有销量、转化、预算、ROI 与实验效果均明确标注为模拟或规划假设；小红书实验尚未执行。公开事实与模型假设分栏呈现。
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="overview">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-no">01 / OVERVIEW</div>
+        <div>
+          <h2>三个项目，一条从市场进入到持续增长的证据链</h2>
+          <p>每个项目都以明确决策结束：是否上市、是否复制快闪、是否增加流量投入。</p>
+        </div>
+      </div>
+      <div class="proof-grid">
+        <article class="proof">
+          <div class="kicker">产品上市 / MANNER 新品 GTM</div>
+          <h3>把新品放进早餐任务，而不是继续增加一个咖啡 SKU</h3>
+          <div class="choice">先占早餐场景，再扩大产品与门店。</div>
+          <div class="metrics">
+            <div class="metric"><span>试点门店</span><b>18 家</b></div>
+            <div class="metric"><span>基准月经营贡献</span><b>¥121.2k</b></div>
+            <div class="metric"><span>盈亏平衡</span><b>29,336 杯</b></div>
+          </div>
+          <div class="tail">基准情景模型结果，非真实经营数据</div>
+        </article>
+        <article class="proof clay">
+          <div class="kicker">线下市场拓展 / 上海快闪 GTM</div>
+          <h3>快闪的价值不是五天人流，而是可复用的市场进入证据</h3>
+          <div class="choice">先验证渠道与转化，再复制更大场。</div>
+          <div class="metrics">
+            <div class="metric"><span>基准到场</span><b>3,200 人</b></div>
+            <div class="metric"><span>有效线索</span><b>1,222 条</b></div>
+            <div class="metric"><span>首场净贡献</span><b>−¥24,651</b></div>
+          </div>
+          <div class="tail">基准情景模型结果，非真实活动成果</div>
+        </article>
+        <article class="proof coral">
+          <div class="kicker">本地增长 / 小红书增长实验</div>
+          <h3>先把内容变成可追踪的到店与首购，再决定是否买更多流量</h3>
+          <div class="choice">先修复 CAC 与承接，再放大投放。</div>
+          <div class="metrics">
+            <div class="metric"><span>30 天有效咨询</span><b>389</b></div>
+            <div class="metric"><span>首购人数</span><b>224</b></div>
+            <div class="metric"><span>全口径 CAC</span><b>¥33.32</b></div>
+          </div>
+          <div class="tail">30 天模型结果，实验尚未执行</div>
+        </article>
+      </div>
+      <div class="read-rule">
+        <div class="rule-step"><b>看机会</b><span>用户任务是否真实存在，市场规模是否能转成购买理由。</span></div>
+        <div class="rule-step"><b>看路径</b><span>产品、价格与渠道是否形成连续且可识别的获客链路。</span></div>
+        <div class="rule-step"><b>看经济</b><span>单杯贡献、CAC、ROI 与复购是否支撑继续投入。</span></div>
+        <div class="rule-step"><b>看停止</b><span>每轮预算都提前写明主指标、门槛和停止动作。</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section white" id="assets">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-no">02 / EVIDENCE</div>
+        <div>
+          <h2>完整报告、商业模型与执行资产</h2>
+          <p>作品集摘要之外，可继续查看各项目的策略报告、财务模型、执行计划和实验设计。</p>
+        </div>
+      </div>
+      <div class="asset-grid">
+        <article class="asset-col">
+          <h3>MANNER 新品 GTM</h3>
+          <div class="boundary">模拟新品与财务结果 / 非 MANNER 官方项目</div>
+          <ul>
+            <li><a href="MANNER_GTM_Strategy.pdf" target="_blank" rel="noopener">20 页 GTM 战略报告</a></li>
+            <li><a href="MANNER_GTM_Financial_Model.xlsx" download>8 个工作表财务模型</a></li>
+            <li><a href="MANNER_GTM_90_Day_Plan.xlsx" download>90 天执行与 RACI 计划</a></li>
+            <li><a href="MANNER_Sales_Enablement.pdf" target="_blank" rel="noopener">门店销售支持手册</a></li>
+          </ul>
+        </article>
+        <article class="asset-col">
+          <h3>上海线下快闪 GTM</h3>
+          <div class="boundary">虚构品牌 AER 01 / 活动数据为模拟</div>
+          <ul>
+            <li><a href="Popup_GTM_Strategy.pdf" target="_blank" rel="noopener">18 页市场进入战略</a></li>
+            <li><a href="Popup_Financial_Model.xlsx" download>三情景财务模型</a></li>
+            <li><a href="Popup_Project_Plan.xlsx" download>甘特、RACI、预算与风险</a></li>
+            <li><a href="Popup_Experience_Design.pdf" target="_blank" rel="noopener">45 ㎡ 体验与动线设计</a></li>
+          </ul>
+        </article>
+        <article class="asset-col">
+          <h3>小红书本地生活增长</h3>
+          <div class="boundary">虚构商家与模拟数据 / A/B 实验未执行</div>
+          <ul>
+            <li><a href="Xiaohongshu_Growth_Strategy.pdf" target="_blank" rel="noopener">20 页增长战略报告</a></li>
+            <li><a href="Xiaohongshu_Content_Plan.xlsx" download>30 天内容排期与 18 篇选题</a></li>
+            <li><a href="Growth_Experiment_Design.xlsx" download>6 个单变量实验设计</a></li>
+            <li><a href="Growth_Financial_Model.xlsx" download>CAC、ROI 与敏感性模型</a></li>
+            <li><a href="Growth_Dashboard.xlsx" download>8 个工作表增长看板</a></li>
+          </ul>
+        </article>
+      </div>
+      <p class="sources">
+        公开事实来源包括 MANNER 官网、《2025 中国城市咖啡发展报告》公开报道、上海市政府公开资料，以及小红书本地生活、聚光帮助中心、商业产品协议和社区规范。各项目报告与 Excel 的 Sources 工作表保留日期、链接和核验边界。
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="deck">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-no">03 / FULL DECK</div>
+        <div>
+          <h2>18 页 GTM Portfolio</h2>
+          <p>点击任意页面可在 PDF 中打开。线上页面使用最终渲染图，下载版保留可编辑表格与图表。</p>
+        </div>
+      </div>
+      <div class="slides">
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=1" target="_blank"><img src="slides/slide-01.png" alt="GTM Portfolio 封面"></a><figcaption><b>01 封面</b><span>GTM Strategy & Growth</span></figcaption></figure>
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=2" target="_blank"><img src="slides/slide-02.png" alt="三个项目的组合概览" loading="lazy"></a><figcaption><b>02 组合概览</b><span>产品进入市场 / 市场拓展 / 本地增长</span></figcaption></figure>
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=3" target="_blank"><img src="slides/slide-03.png" alt="个人能力与项目证据" loading="lazy"></a><figcaption><b>03 能力概览</b><span>七项能力与对应决策产出</span></figcaption></figure>
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=4" target="_blank"><img src="slides/slide-04.png" alt="MANNER 新品 GTM 项目概览" loading="lazy"></a><figcaption><b>04 MANNER 项目概览</b><span>早餐场景、价格阶梯与 90 天试点</span></figcaption></figure>
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=5" target="_blank"><img src="slides/slide-05.png" alt="MANNER 市场机会与目标用户" loading="lazy"></a><figcaption><b>05 MANNER 机会与用户</b><span>市场密度、竞争位置与客户优先级</span></figcaption></figure>
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=6" target="_blank"><img src="slides/slide-06.png" alt="MANNER 产品定位与定价" loading="lazy"></a><figcaption><b>06 MANNER 定位与定价</b><span>22 元锚点、19 元首杯与 29 元组合</span></figcaption></figure>
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=7" target="_blank"><img src="slides/slide-07.png" alt="MANNER 三情景经营测算" loading="lazy"></a><figcaption><b>07 MANNER 情景测算</b><span>保守、基准与乐观经营贡献</span></figcaption></figure>
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=8" target="_blank"><img src="slides/slide-08.png" alt="MANNER 渠道预算与执行" loading="lazy"></a><figcaption><b>08 MANNER 渠道与执行</b><span>主渠道、30 万预算与 90 天路径</span></figcaption></figure>
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=9" target="_blank"><img src="slides/slide-09.png" alt="上海快闪 GTM 项目概览" loading="lazy"></a><figcaption><b>09 快闪项目概览</b><span>市场进入验证、线索与成交</span></figcaption></figure>
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=10" target="_blank"><img src="slides/slide-10.png" alt="上海快闪商圈与选址" loading="lazy"></a><figcaption><b>10 商圈与选址</b><span>七项权重模型与静安寺首层场地</span></figcaption></figure>
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=11" target="_blank"><img src="slides/slide-11.png" alt="上海快闪体验与转化" loading="lazy"></a><figcaption><b>11 体验与转化</b><span>三分钟体验、现场漏斗与渠道机制</span></figcaption></figure>
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=12" target="_blank"><img src="slides/slide-12.png" alt="上海快闪预算与 ROI" loading="lazy"></a><figcaption><b>12 预算、ROI 与复盘</b><span>成本拆分、继续门槛与优化动作</span></figcaption></figure>
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=13" target="_blank"><img src="slides/slide-13.png" alt="小红书本地增长项目概览" loading="lazy"></a><figcaption><b>13 小红书项目概览</b><span>内容、追踪、转化与 CAC 决策</span></figcaption></figure>
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=14" target="_blank"><img src="slides/slide-14.png" alt="小红书用户与内容策略" loading="lazy"></a><figcaption><b>14 用户与内容</b><span>三类客群、五类栏目与内容承接</span></figcaption></figure>
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=15" target="_blank"><img src="slides/slide-15.png" alt="小红书增长实验设计" loading="lazy"></a><figcaption><b>15 增长实验</b><span>六个单变量实验与平台到门店记录链</span></figcaption></figure>
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=16" target="_blank"><img src="slides/slide-16.png" alt="小红书 CAC 与迭代" loading="lazy"></a><figcaption><b>16 CAC 与迭代</b><span>允许 CAC、ROI 与下一轮优先级</span></figcaption></figure>
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=17" target="_blank"><img src="slides/slide-17.png" alt="GTM 方法论" loading="lazy"></a><figcaption><b>17 GTM 方法论</b><span>市场机会到迭代增长的八步框架</span></figcaption></figure>
+        <figure class="slide"><a href="XieYulei_GTM_Portfolio_2026-11-11.pdf#page=18" target="_blank"><img src="slides/slide-18.png" alt="GTM 作品集结尾与求职方向" loading="lazy"></a><figcaption><b>18 结尾</b><span>求职方向与联系方式</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="closing">
+  <div class="wrap">
+    <div class="eyebrow">CONTACT / NEXT ROLE</div>
+    <h2>把市场判断做成<br>可执行的增长路径</h2>
+    <p>我希望继续在真实业务中回答三个问题：进入哪个市场、用什么产品与渠道触达用户、如何用数据和单位经济决定继续投入。</p>
+    <div class="role-row">
+      <div><b>产品上市</b><span>定位、定价、组合与单店经济</span></div>
+      <div><b>市场拓展</b><span>选址、渠道、体验与转化</span></div>
+      <div><b>本地增长</b><span>内容、追踪、实验与迭代</span></div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <span>谢雨蕾 · GTM Portfolio · 2026</span>
+    <span>独立商业模拟作品集，非真实企业委托。结果与预算均按项目报告口径标注。</span>
+  </div>
+</footer>
+</body>
+</html>
